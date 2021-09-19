@@ -1,0 +1,10 @@
+.total-container {
+  margin: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 1204px) {
+  .total-container {
+    text-align: center;
+  }
+}
