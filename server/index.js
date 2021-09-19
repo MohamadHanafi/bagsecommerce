@@ -6,7 +6,7 @@ const webhook = require('./api/webhook');
 const paymentIntent = require('./api/paymentIntent');
 
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(
   express.json({
@@ -25,4 +25,4 @@ app.post('/create-payment-intent', paymentIntent);
 
 app.post('/webhook', webhook);
 
-app.listen(port, () => console.log('server is running on port ', port));
+app.listen(PORT, () => console.log('server is running on port ', PORT));
